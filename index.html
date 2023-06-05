@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Todo List App</title>
+    <link rel="shortcut icon" href="./hand.png" type="image/x-icon" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1 class="title">Todo App</h1>
+      <div class="task">
+        <form name="taskForm" method="post" id="form">
+          <input
+            type="text"
+            name="task"
+            id="task"
+            placeholder="Add a task..."
+            title="Enter Your Task Here"
+            required
+            autocomplete="off"
+          />
+          <button
+            class="todo_btn"
+            title="Click Here To Add Your Task"
+            id="submit"
+            type="submit"
+          >
+            +
+          </button>
+        </form>
+      </div>
+      <ul id="tasklist" class="tasklist"></ul>
+    </div>
+    <script src="./index.js"></script>
+  </body>
+</html>

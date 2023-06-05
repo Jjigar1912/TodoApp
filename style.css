@@ -1,0 +1,96 @@
+@import url("https://fonts.googleapis.com/css2?family=Sora:wght@600&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #ffc600;
+  font-family: sora;
+  display: flex;
+  justify-content: center;
+}
+
+.container {
+  margin-top: 40px;
+}
+.container .title {
+  text-align: center;
+  font-size: 3.3em;
+  font-weight: bold;
+}
+
+.task {
+  padding: 20px;
+  margin: 40px 0;
+}
+.task input {
+  border: none;
+  padding: 10px;
+  outline: none;
+  font-size: 1rem;
+  width: 250px;
+  margin-right: 10px;
+  border-radius: 5px;
+}
+.task .todo_btn {
+  background: linear-gradient(#2f6097, #54abfd);
+  border: 1px solid #4a9efd;
+  border-radius: 5px;
+  color: #fff;
+  font-size: 1.2rem;
+  line-height: 25px;
+  padding: 7px;
+  width: 41px;
+}
+
+#tasklist {
+  list-style-type: none;
+}
+#tasklist .list {
+  display: flex;
+  align-items: center;
+  background-color: white;
+  border-top: 3px solid #4a9efd;
+  cursor: pointer;
+}
+#tasklist .list:hover {
+  background-color: mintcream;
+}
+#tasklist .list .content {
+  flex-grow: 2;
+  text-transform: capitalize;
+}
+#tasklist .list input {
+  width: 20px;
+  height: 20px;
+}
+#tasklist .list div {
+  padding: 10px;
+  text-transform: lowercase;
+  border-right: 2px solid #2f6097;
+}
+#tasklist .list div:first-child {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#tasklist .list div:last-child {
+  padding: 10px 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.active {
+  text-decoration: line-through;
+}
+
+@media screen and (max-width: 350px) {
+  #form {
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+  }
+}/*# sourceMappingURL=style.css.map */
