@@ -52,6 +52,7 @@ body
     list-style-type: none;
     .list
     {
+        padding: 5px;
         display: flex;
         align-items: center;
         background-color: white;
@@ -71,16 +72,22 @@ body
             height: 20px;
         }
         div{
-            padding : 10px ;
+            padding: 10px 5px;
             text-transform: lowercase;
-            border-right: 2px solid #2f6097;
             &:first-child
             {
                 display: flex;
                 justify-content: center;
                 align-items: center;
             }
-
+            &:nth-child(3)
+            {
+                padding: 10px 5px ;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+           
+            }
             &:last-child
             {
                 padding: 10px 5px ;
@@ -88,8 +95,11 @@ body
                 justify-content: center;
                 align-items: center;
             }
-        }
+         }
     }
+}
+.btn{
+    width: fit-content !important;
 }
 .active
 {

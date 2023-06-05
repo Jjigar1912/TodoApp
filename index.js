@@ -1,9 +1,31 @@
 const form = document.getElementById("form");
 const tasklist = document.getElementById("tasklist");
 var array = [];
+var globalId;
 form.addEventListener("submit", (e) => {
   e.preventDefault();
   const task = document.getElementById("task").value;
+  if (task.trim().length == 0) {
+    alert("Enter Valid Task Name.");
+    document.getElementById("task").value = "";
+    return;
+  }
+  if (document.getElementById("submit").innerHTML == "Done") {
+    let data = JSON.parse(localStorage.getItem("task"));
+    for (let a of data) {
+      if (a.id === globalId) {
+        a.task = task;
+        document.getElementById(a.id).children[1].innerHTML = a.task;
+        document.getElementById("submit").classList.remove("btn");
+        document.getElementById("submit").innerHTML = "+";
+        document.getElementById("task").value = "";
+        break;
+      }
+    }
+    localStorage.removeItem("task");
+    localStorage.setItem("task", JSON.stringify(data));
+    return;
+  }
   const id = Date.now();
   const obj = {
     id,
@@ -25,6 +47,7 @@ form.addEventListener("submit", (e) => {
       <input type="checkbox" onclick="checkItem(${id})"/>
     </div>
     <div class="content">${task}</div>
+    <div><img src="./icons8-edit.svg" width="30" height="30" id="edit" onclick='edit(${id})'/></div>
     <div><img src="./icons8-delete.svg" width="30" height="30"  id='remove' onclick='remove(${id})'/></div>
   </li> `;
   document.getElementById("task").value = "";
@@ -70,6 +93,17 @@ const checkItem = (id) => {
     localStorage.setItem("task", JSON.stringify(x));
   }
 };
+const edit = (id) => {
+  let data = JSON.parse(localStorage.getItem("task"));
+  for (let a of data) {
+    if (a.id === id) {
+      globalId = a.id;
+      document.getElementById("task").value = a.task;
+      document.getElementById("submit").innerHTML = "Done";
+      document.getElementById("submit").classList.add("btn");
+    }
+  }
+};
 const show = () => {
   if (localStorage.getItem("task")) {
     const data = JSON.parse(localStorage.getItem("task"));
@@ -84,6 +118,9 @@ const show = () => {
         }/>
                </div>
                <div class="content ${a.status ? "active" : ""}">${a.task}</div>
+               <div><img src="./icons8-edit.svg" width="30" height="30" id="edit" onclick='edit(${
+                 a.id
+               })'/></div>
                <div><img src="./icons8-delete.svg" width="30" height="30"  id='remove' onclick='remove(${
                  a.id
                })'/></div>

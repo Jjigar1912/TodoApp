@@ -49,6 +49,7 @@ body {
   list-style-type: none;
 }
 #tasklist .list {
+  padding: 5px;
   display: flex;
   align-items: center;
   background-color: white;
@@ -67,11 +68,16 @@ body {
   height: 20px;
 }
 #tasklist .list div {
-  padding: 10px;
+  padding: 10px 5px;
   text-transform: lowercase;
-  border-right: 2px solid #2f6097;
 }
 #tasklist .list div:first-child {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#tasklist .list div:nth-child(3) {
+  padding: 10px 5px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -81,6 +87,11 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.btn {
+  width: -moz-fit-content !important;
+  width: fit-content !important;
 }
 
 .active {
