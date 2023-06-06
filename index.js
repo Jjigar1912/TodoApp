@@ -36,7 +36,8 @@ form.addEventListener("submit", (e) => {
     array.push(obj);
     localStorage.setItem("task", JSON.stringify(array));
   } else {
-    var x = JSON.parse(localStorage.getItem("task"));
+    var x = JSON.parse(localStorage.getItem(
+      "task"));
     console.log(x);
     x.push(obj);
     localStorage.setItem("task", JSON.stringify(x));
