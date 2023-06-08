@@ -6,6 +6,7 @@
 }
 
 body {
+  margin-bottom: 20px ;
   background-color: #ffc600;
   font-family: sora;
   display: flex;
@@ -14,6 +15,10 @@ body {
 
 .container {
   margin-top: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 .container .title {
   text-align: center;
@@ -60,8 +65,10 @@ body {
   background-color: mintcream;
 }
 #tasklist .list .content {
-  flex-grow: 2;
+  
   text-transform: capitalize;
+  max-width : 400px !important;
+  padding : 10px 10px ; 
 }
 #tasklist .list input {
   width: 20px;
