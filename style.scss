@@ -13,6 +13,10 @@ body
 }
 .container
 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
     margin-top: 40px ;
     .title
     {
@@ -54,7 +58,7 @@ body
     {
         padding: 5px;
         display: flex;
-        align-items: center;
+        align-items: flex-start;
         background-color: white;
         border-top: 3px solid #4a9efd;
         cursor: pointer; 
@@ -64,7 +68,9 @@ body
         }
         .content
         {
-            flex-grow: 2;
+            max-width: 350px;
+            padding : 0px 5px ;
+            text-align: justify;
             text-transform: capitalize;
         }
         input{
