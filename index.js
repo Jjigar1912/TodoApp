@@ -46,7 +46,7 @@ form.addEventListener("submit", (e) => {
     <div style="align-self : flex-start">
       <input type="checkbox" onclick="checkItem(${id})"/>
     </div>
-    <div class="content">${task}</div>
+    <div class="content"><p>${task}</p></div>
     <div style="align-self : flex-start"><img src="./icons8-edit.svg" width="30" height="30" id="edit" onclick='edit(${id})'/></div>
     <div style="align-self : flex-start"><img src="./icons8-delete.svg" width="30" height="30"  id='remove' onclick='remove(${id})'/></div>
   </li>`;
@@ -117,7 +117,9 @@ const show = () => {
           a.status ? "checked" : ""
         }/>
                </div>
-               <div class="content ${a.status ? "active" : ""}">${a.task}</div>
+               <div class="content ${a.status ? "active" : ""}"><p>${
+          a.task
+        }</p></div>
                <div style="align-self : start " ><img src="./icons8-edit.svg" width="30" height="30" id="edit" onclick='edit(${
                  a.id
                })'/></div>

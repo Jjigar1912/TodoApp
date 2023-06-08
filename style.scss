@@ -60,7 +60,8 @@ body
     list-style-type: none;
     .list
     { 
-        width: 100%;
+        max-width : 700px ; 
+        margin: auto;
         padding: 5px;
         display: flex;
         align-items: center;
@@ -74,6 +75,7 @@ body
         .content
         {
             text-transform: capitalize;
+            word-wrap: break-word;
         }
         input{
             width: 20px ;
@@ -120,6 +122,109 @@ body
 .active
 {
     text-decoration: line-through;
+}
+@media screen and (max-width : 700px) {
+    #tasklist
+    {
+        max-width : 600px ; 
+        width: 100% ;
+        margin: auto;
+    }
+    .list
+    {
+        max-width: 600px;
+        width: 100%;
+        margin: auto;
+    }
+}
+@media screen and (max-width : 600px) {
+    #tasklist
+    {
+        max-width : 500px ; 
+        width: 100% ;
+        margin: auto;
+    }
+    .list
+    {
+        max-width: 500px;
+        width: 100%;
+        margin: auto;
+    }
+}
+
+@media screen and (max-width : 500px) {
+    #tasklist
+    {
+        max-width : 400px ; 
+        width: 100% ;
+        margin: auto;
+    }
+    .list
+    {
+        max-width: 400px;
+        width: 100%;
+        margin: auto;
+    }
+}
+
+@media screen and (max-width : 400px) {
+    #tasklist
+    {
+        max-width : 300px ; 
+        width: 100% ;
+        margin: auto;
+    }
+    .list
+    {
+        max-width: 300px;
+        width: 100%;
+        margin: auto;
+    }
+}
+
+
+@media screen and (max-width : 399px) {
+    #tasklist
+    {
+        max-width : 350px ; 
+        width: 100% ;
+        margin: auto;
+    }
+    .list
+    {
+        max-width: 350px;
+        width: 100%;
+        margin: auto;
+    }
+}
+@media screen and (max-width : 349px) {
+    #tasklist
+    {
+        max-width : 340px ; 
+        width : 100% ; 
+        margin: auto;
+    }
+    .list
+    {
+        max-width : 340px ; 
+        width: 100%;
+        margin: auto;
+    }
+}
+@media screen and (max-width : 330px) {
+    #tasklist
+    {
+        max-width: 300px;
+        margin: auto;
+        width: 100%;
+    }
+    .list
+    {
+        max-width: 300px;
+        margin: auto;
+        width: 100%;
+    }
+    
 }
 @media screen and (max-width : 350px) {
     #form
