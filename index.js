@@ -43,13 +43,13 @@ form.addEventListener("submit", (e) => {
     console.log(x);
   }
   const data = `<li class="list" id="${id}">
-    <div>
+    <div style="align-self : flex-start">
       <input type="checkbox" onclick="checkItem(${id})"/>
     </div>
     <div class="content">${task}</div>
     <div style="align-self : flex-start"><img src="./icons8-edit.svg" width="30" height="30" id="edit" onclick='edit(${id})'/></div>
     <div style="align-self : flex-start"><img src="./icons8-delete.svg" width="30" height="30"  id='remove' onclick='remove(${id})'/></div>
-  </li> `;
+  </li>`;
   document.getElementById("task").value = "";
   tasklist.insertAdjacentHTML("beforeend", data);
 });
