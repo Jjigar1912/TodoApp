@@ -85,7 +85,6 @@ body {
   display: flex;
   justify-content: center;
   align-items: flex-start;
-  border: 2px solid;
 }
 #tasklist .list div:nth-child(3) {
   padding: 10px 5px;
