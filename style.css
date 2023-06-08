@@ -69,8 +69,6 @@ body {
   background-color: mintcream;
 }
 #tasklist .list .content {
-  flex-grow: 2;
-  text-align: justify;
   text-transform: capitalize;
 }
 #tasklist .list input {
@@ -82,17 +80,24 @@ body {
   text-transform: lowercase;
 }
 #tasklist .list div:first-child {
+  width: 50px;
+  padding-top: 15px;
   display: flex;
   justify-content: center;
   align-items: flex-start;
 }
+#tasklist .list div:nth-child(2) {
+  width: calc(100% - 150px);
+}
 #tasklist .list div:nth-child(3) {
+  width: 50px;
   padding: 10px 5px;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 #tasklist .list div:last-child {
+  width: 50px;
   padding: 10px 5px;
   display: flex;
   justify-content: center;

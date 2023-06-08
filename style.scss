@@ -73,8 +73,6 @@ body
         }
         .content
         {
-            flex-grow: 2;
-            text-align: justify;
             text-transform: capitalize;
         }
         input{
@@ -86,12 +84,19 @@ body
             text-transform: lowercase;
             &:first-child
             {
+                width : 50px ; 
+                padding-top: 15px ; 
                 display: flex;
                 justify-content: center;
                 align-items: flex-start;
             }
+            &:nth-child(2)
+            {
+                width: calc(100% - 150px);
+            }
             &:nth-child(3)
             {
+                width : 50px ;
                 padding: 10px 5px ;
                 display: flex;
                 justify-content: center;
@@ -100,6 +105,7 @@ body
             }
             &:last-child
             {
+                width: 50px;
                 padding: 10px 5px ;
                 display: flex;
                 justify-content: center;

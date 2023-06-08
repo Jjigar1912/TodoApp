@@ -112,16 +112,16 @@ const show = () => {
       data1 =
         data1 +
         `<li class="list" id="${a.id}">
-             <div>
+             <div style="align-self : start ">
                  <input type="checkbox" onclick="checkItem(${a.id})" ${
           a.status ? "checked" : ""
         }/>
                </div>
                <div class="content ${a.status ? "active" : ""}">${a.task}</div>
-               <div><img src="./icons8-edit.svg" width="30" height="30" id="edit" onclick='edit(${
+               <div style="align-self : start " ><img src="./icons8-edit.svg" width="30" height="30" id="edit" onclick='edit(${
                  a.id
                })'/></div>
-               <div><img src="./icons8-delete.svg" width="30" height="30"  id='remove' onclick='remove(${
+               <div style="align-self : start " ><img src="./icons8-delete.svg" width="30" height="30"  id='remove' onclick='remove(${
                  a.id
                })'/></div>
              </li> `;
