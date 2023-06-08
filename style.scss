@@ -72,8 +72,7 @@ body
         }
         .content
         {
-            max-width: 650px;
-            width : 100%;
+            flex-grow: 2;
             text-align: justify;
             text-transform: capitalize;
         }
