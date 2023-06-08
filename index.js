@@ -43,7 +43,7 @@ form.addEventListener("submit", (e) => {
     console.log(x);
   }
   const data = `<li class="list" id="${id}">
-    <div style="align-self : flex-start">
+    <div>
       <input type="checkbox" onclick="checkItem(${id})"/>
     </div>
     <div class="content">${task}</div>
