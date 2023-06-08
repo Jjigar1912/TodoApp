@@ -50,7 +50,7 @@ body {
 }
 
 #tasklist {
-  margin: 5px;
+  margin: 10px;
   list-style-type: none;
 }
 #tasklist .list {
@@ -66,6 +66,7 @@ body {
 }
 #tasklist .list .content {
   max-width: 350px;
+  width: 100%;
   text-align: justify;
   text-transform: capitalize;
 }
